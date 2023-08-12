@@ -1,0 +1,94 @@
+:root {
+  --main-primary: #00bb00;
+  --main-secondary: #00ff00;
+  --hover: #003b00;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #212428;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  background-color: var(--main-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 40px 40px 40px;
+  padding: 20px 50px;
+  max-width: 900px;
+  border: 3px solid black;
+}
+
+.main .project-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.main h1 {
+  color: black;
+  margin: 20px 0 30px 0;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 3px;
+  font-family: 'VT323', monospace;
+  font-size: 50px;
+}
+
+.main h1:hover {
+  cursor: default;
+}
+
+.main ul {
+  width: 100%;
+}
+
+.main li {
+  list-style-type: none;
+}
+
+.main a {
+  background-color: var(--main-secondary);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  margin: 10px 0;
+  width: 100%;
+  height: 80px;
+  text-decoration: none;
+  font-size: 25px;
+  border: 3px solid black;
+  transition: color 300ms ease 0s;
+}
+
+.main a:hover {
+  color: white;
+  background-color: var(--hover);
+}
+
+@media screen and (max-width: 1000px) {
+  .main h1 {
+    font-size: 12px;
+    margin: 10px 0 10px 0;
+  }
+
+  .main a {
+    text-align: center;
+    font-size: 12px;
+    height: 30px;
+  }
+}
