@@ -1,4 +1,5 @@
 import './App.css';
+import PropTypes from 'prop-types';
 
 function App() {
   return (
@@ -124,6 +125,13 @@ function Personal({ personalObj }) {
   );
 }
 
+Personal.propTypes = {
+  personalObj: PropTypes.shape({
+    name: PropTypes.string.isRequired, // Assuming name is a required string
+    href: PropTypes.string.isRequired, // Assuming href is a required string
+  }).isRequired,
+};
+
 function FrontEndMentor({ frontEndMentorObj }) {
   return (
     <li>
@@ -136,6 +144,13 @@ function FrontEndMentor({ frontEndMentorObj }) {
   );
 }
 
+FrontEndMentor.propTypes = {
+  frontEndMentorObj: PropTypes.shape({
+    name: PropTypes.string.isRequired, // Assuming name is a required string
+    href: PropTypes.string.isRequired, // Assuming href is a required string
+  }).isRequired,
+};
+
 function Course({ courseObj }) {
   return (
     <li>
@@ -147,5 +162,12 @@ function Course({ courseObj }) {
     </li>
   );
 }
+
+Course.propTypes = {
+  courseObj: PropTypes.shape({
+    name: PropTypes.string.isRequired, // Assuming name is a required string
+    href: PropTypes.string.isRequired, // Assuming href is a required string
+  }).isRequired,
+};
 
 export default App;
